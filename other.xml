@@ -1,0 +1,12 @@
+<application>
+  <component name="NodeJsLocalInterpreters">
+    <local-interpreter path="C:/Program Files/nodejs/node.exe" />
+  </component>
+  <component name="PersistenceGenerationSettings">
+    <option name="addToUnit" value="true" />
+    <option name="entitySuffix" value="" />
+    <option name="ENTITY_SUFFIX" value="" />
+    <option name="ADD_TO_UNIT" value="true" />
+  </component>
+  <component name="WebServicesPluginSettings" SelectedPlatform="Apache Axis" />
+</application>
