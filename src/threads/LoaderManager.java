@@ -43,6 +43,8 @@ public class LoaderManager implements ThreadCompleteListener {
         }
     }
 
+    public ArrayList<String> getUsers() { return this.users; }
+
     public int getManagerNumber() {
         return managerNumber;
     }

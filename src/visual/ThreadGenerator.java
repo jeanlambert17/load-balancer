@@ -45,7 +45,7 @@ public class ThreadGenerator extends JDialog {
     }
 
     private void onOK() {
-        loadBalancer.go("jean");
+        loadBalancer.go();
     }
 
     private void onCancel() {

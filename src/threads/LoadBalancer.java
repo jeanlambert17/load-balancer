@@ -13,7 +13,7 @@ public class LoadBalancer {
         }
     }
 
-    public void go(String user) {
+    public void go() {
         boolean activeLoader = false;
         String randomUser = this.mapName((int) (Math.random()*5));
 
@@ -26,9 +26,18 @@ public class LoadBalancer {
             }
         }
         if(!activeLoader) {
-            // No hay ningun Loader activo, a quien le doy la carga?
-            int random = (int) (Math.random()*5);
-            LoaderManager loader = loaderMap.get(random);
+            Integer users = -1;
+            int manager = 0;
+            for(int i = 0; i < loaderMap.size(); i ++) {
+                int loaderUsers = loaderMap.get(i).getUsers().size();
+                if(loaderUsers < users && users > -1) {
+                    users = loaderUsers;
+                    manager = i;
+                }
+            }
+//            int random = (int) (Math.random()*5);
+//            LoaderManager loader = loaderMap.get(random);
+            LoaderManager loader = loaderMap.get(manager);
             loader.go(randomUser);
         }
     }
